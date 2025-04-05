@@ -1,1 +1,10 @@
-Hello
+<div>
+    <%= form_for :forecast, url: forecasts_path do |form| %>
+        <%= form.label :address %>
+        <%= form.text_field :address %>
+        <%= form.submit 'Submit' %>
+    <% end %>
+</div>
+
+<turbo-frame id="forecast">
+</turbo-frame>
