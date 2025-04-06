@@ -1,0 +1,11 @@
+<%= turbo_stream.update "forecast" do %>
+    <% if @weather.location.present? %>
+        <p><%= @weather.location.display %></p>
+    <% else %>
+        <p>No weather data available</p>
+    <% end %>
+
+    <% if @weather.cached %>
+        <p>Cached data</p>
+    <% end %>
+<% end %>

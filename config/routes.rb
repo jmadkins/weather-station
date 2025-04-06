@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   root "home#index"
-  resources :weather, only: %i[create]
+  resource :weather, only: %i[create]
 end
