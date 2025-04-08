@@ -24,6 +24,6 @@ class Weather::Conditions
 
   # @return [Float] Temperature in Fahrenheit
   def fahrenheit_temperature
-    (temperature * 9/5.to_f) + 32
+    (temperature * 9 / 5.to_f) + 32
   end
 end

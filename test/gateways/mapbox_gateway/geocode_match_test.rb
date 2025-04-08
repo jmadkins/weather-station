@@ -9,6 +9,6 @@ class MapboxGateway::GeocodeMatchTest < ActiveSupport::TestCase
     assert_equal "Utah", reply.state
     assert_equal "84106", reply.postal_code
     assert_equal 40.725163, reply.latitude
-    assert_equal -111.86313, reply.longitude
+    assert_equal(-111.86313, reply.longitude)
   end
 end
