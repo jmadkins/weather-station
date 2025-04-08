@@ -1,11 +1,28 @@
 <%= turbo_stream.update "forecast" do %>
-    <% if @weather.location.present? %>
-        <p><%= @weather.location.display %></p>
-    <% else %>
-        <p>No weather data available</p>
-    <% end %>
+    <div class="panel">
+        <h2><%= @weather.current_conditions.fahrenheit_temperature.round %>&deg; <%= @weather.location.display %></h2>
+        <p><%= @weather.current_conditions.detailed_forecast %></p>
 
-    <% if @weather.cached %>
-        <p>Cached data</p>
-    <% end %>
+        <% if @weather.cached %>
+            <p class="help-text">The data you're viewing is cached.</p>
+        <% end %>
+
+        <h3>Extended Forecast</h3>
+        <div class="forecast">
+            <% @weather.forecast.each do |forecast| %>
+                <div>
+                    <strong><%= forecast.name %></strong>
+                    <p><%= forecast.fahrenheit_temperature.round %>&deg; <%= forecast.short_forecast %></p>
+                <div>
+            <% end %>
+        </div>
+
+        <h3>Detailed Forecast</h3>
+        <dl>
+            <% @weather.forecast.each do |forecast| %>
+                <dt><%= forecast.name %></dt>
+                <dd><%= forecast.detailed_forecast %></dd>
+            <% end %>
+        </dl>
+    </div>
 <% end %>

@@ -1,13 +1,24 @@
 class Forecast
-  include ActiveModel::API
-
+  # Fetches weather conditions for given latitude/longitude position
+  #
+  # @param latitude [Float]
+  # @param longitude [Float]
+  # @return [Array<Weather::Conditions>]
   def self.fetch(latitude, longitude)
-    nil
+    # NOTE: After additional weather providers are introduced, this logic would change a bit
+    # forecast = Forecast::Fetcher.execute(latitude, longitude)
+    forecast = NWSGateway.new.forecast(latitude, longitude)
+    return if forecast.nil?
+
+    forecast.map do |f|
+      Weather::Conditions.new(
+        name: f.name,
+        start_at: f.start_time,
+        end_at: f.end_time,
+        temperature: f.temperature,
+        short_forecast: f.short,
+        detailed_forecast: f.detailed
+      )
+    end
   end
-
-  # @return [Weather::Current] The current weather conditions.
-  attr_accessor :current_conditions
-
-  # @return [Hash<ActiveSupport::TimeWithZone, Weather::Conditions>] The forecast for the next few days.
-  attr_accessor :daily_forecast
 end

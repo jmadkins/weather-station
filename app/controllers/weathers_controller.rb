@@ -1,8 +1,7 @@
 class WeathersController < ApplicationController
-  # TODO: error handling
-
   def create
     @weather = Weather.fetch(geocoded_location)
+    render :try_again if @weather.location.nil? || @weather.current_conditions.nil?
   end
 
   private

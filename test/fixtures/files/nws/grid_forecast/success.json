@@ -1,0 +1,287 @@
+{
+  "@context": {
+    "@version": "1.1",
+    "wx": "https://api.weather.gov/ontology#",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "unit": "http://codes.wmo.int/common/unit/",
+    "@vocab": "https://api.weather.gov/ontology#"
+  },
+  "geometry": "POLYGON((-97.0799 39.7451,-97.0803 39.7672,-97.109 39.7668,-97.1085 39.7448,-97.0799 39.7451))",
+  "units": "si",
+  "forecastGenerator": "BaselineForecastGenerator",
+  "generatedAt": "2025-04-06T05:21:17+00:00",
+  "updateTime": "2025-04-06T05:10:48+00:00",
+  "validTimes": "2025-04-05T23:00:00+00:00/P7DT2H",
+  "elevation": {
+    "unitCode": "wmoUnit:m",
+    "value": 441.96
+  },
+  "periods": [
+    {
+      "number": 1,
+      "name": "Overnight",
+      "startTime": "2025-04-06T00:00:00-05:00",
+      "endTime": "2025-04-06T06:00:00-05:00",
+      "isDaytime": false,
+      "temperature": -3,
+      "temperatureUnit": "C",
+      "temperatureTrend": "",
+      "probabilityOfPrecipitation": {
+        "unitCode": "wmoUnit:percent",
+        "value": null
+      },
+      "windSpeed": "5 to 10 km/h",
+      "windDirection": "N",
+      "icon": "https://api.weather.gov/icons/land/night/bkn?size=medium",
+      "shortForecast": "Mostly Cloudy",
+      "detailedForecast": "Mostly cloudy, with a low around -3. North wind 5 to 10 km/h."
+    },
+    {
+      "number": 2,
+      "name": "Sunday",
+      "startTime": "2025-04-06T06:00:00-05:00",
+      "endTime": "2025-04-06T18:00:00-05:00",
+      "isDaytime": true,
+      "temperature": 13,
+      "temperatureUnit": "C",
+      "temperatureTrend": "",
+      "probabilityOfPrecipitation": {
+        "unitCode": "wmoUnit:percent",
+        "value": null
+      },
+      "windSpeed": "5 km/h",
+      "windDirection": "NW",
+      "icon": "https://api.weather.gov/icons/land/day/sct?size=medium",
+      "shortForecast": "Widespread Frost then Mostly Sunny",
+      "detailedForecast": "Widespread frost between 7am and 8am. Mostly sunny, with a high near 13. Northwest wind around 5 km/h."
+    },
+    {
+      "number": 3,
+      "name": "Sunday Night",
+      "startTime": "2025-04-06T18:00:00-05:00",
+      "endTime": "2025-04-07T06:00:00-05:00",
+      "isDaytime": false,
+      "temperature": 0,
+      "temperatureUnit": "C",
+      "temperatureTrend": "",
+      "probabilityOfPrecipitation": {
+        "unitCode": "wmoUnit:percent",
+        "value": null
+      },
+      "windSpeed": "5 to 10 km/h",
+      "windDirection": "SW",
+      "icon": "https://api.weather.gov/icons/land/night/few?size=medium",
+      "shortForecast": "Mostly Clear",
+      "detailedForecast": "Mostly clear, with a low around 0. Southwest wind 5 to 10 km/h."
+    },
+    {
+      "number": 4,
+      "name": "Monday",
+      "startTime": "2025-04-07T06:00:00-05:00",
+      "endTime": "2025-04-07T18:00:00-05:00",
+      "isDaytime": true,
+      "temperature": 14,
+      "temperatureUnit": "C",
+      "temperatureTrend": "",
+      "probabilityOfPrecipitation": {
+        "unitCode": "wmoUnit:percent",
+        "value": null
+      },
+      "windSpeed": "15 to 20 km/h",
+      "windDirection": "N",
+      "icon": "https://api.weather.gov/icons/land/day/few?size=medium",
+      "shortForecast": "Widespread Frost then Sunny",
+      "detailedForecast": "Widespread frost between 7am and 8am. Sunny, with a high near 14. North wind 15 to 20 km/h, with gusts as high as 35 km/h."
+    },
+    {
+      "number": 5,
+      "name": "Monday Night",
+      "startTime": "2025-04-07T18:00:00-05:00",
+      "endTime": "2025-04-08T06:00:00-05:00",
+      "isDaytime": false,
+      "temperature": -1,
+      "temperatureUnit": "C",
+      "temperatureTrend": "",
+      "probabilityOfPrecipitation": {
+        "unitCode": "wmoUnit:percent",
+        "value": null
+      },
+      "windSpeed": "10 to 15 km/h",
+      "windDirection": "E",
+      "icon": "https://api.weather.gov/icons/land/night/skc?size=medium",
+      "shortForecast": "Clear",
+      "detailedForecast": "Clear, with a low around -1. East wind 10 to 15 km/h."
+    },
+    {
+      "number": 6,
+      "name": "Tuesday",
+      "startTime": "2025-04-08T06:00:00-05:00",
+      "endTime": "2025-04-08T18:00:00-05:00",
+      "isDaytime": true,
+      "temperature": 19,
+      "temperatureUnit": "C",
+      "temperatureTrend": "",
+      "probabilityOfPrecipitation": {
+        "unitCode": "wmoUnit:percent",
+        "value": null
+      },
+      "windSpeed": "10 to 30 km/h",
+      "windDirection": "S",
+      "icon": "https://api.weather.gov/icons/land/day/few?size=medium",
+      "shortForecast": "Widespread Frost then Sunny",
+      "detailedForecast": "Widespread frost before 8am. Sunny, with a high near 19. South wind 10 to 30 km/h, with gusts as high as 45 km/h."
+    },
+    {
+      "number": 7,
+      "name": "Tuesday Night",
+      "startTime": "2025-04-08T18:00:00-05:00",
+      "endTime": "2025-04-09T06:00:00-05:00",
+      "isDaytime": false,
+      "temperature": 8,
+      "temperatureUnit": "C",
+      "temperatureTrend": "",
+      "probabilityOfPrecipitation": {
+        "unitCode": "wmoUnit:percent",
+        "value": null
+      },
+      "windSpeed": "20 to 25 km/h",
+      "windDirection": "S",
+      "icon": "https://api.weather.gov/icons/land/night/sct?size=medium",
+      "shortForecast": "Partly Cloudy",
+      "detailedForecast": "Partly cloudy, with a low around 8. South wind 20 to 25 km/h, with gusts as high as 45 km/h."
+    },
+    {
+      "number": 8,
+      "name": "Wednesday",
+      "startTime": "2025-04-09T06:00:00-05:00",
+      "endTime": "2025-04-09T18:00:00-05:00",
+      "isDaytime": true,
+      "temperature": 23,
+      "temperatureUnit": "C",
+      "temperatureTrend": "",
+      "probabilityOfPrecipitation": {
+        "unitCode": "wmoUnit:percent",
+        "value": null
+      },
+      "windSpeed": "15 to 20 km/h",
+      "windDirection": "W",
+      "icon": "https://api.weather.gov/icons/land/day/sct?size=medium",
+      "shortForecast": "Mostly Sunny",
+      "detailedForecast": "Mostly sunny, with a high near 23. West wind 15 to 20 km/h, with gusts as high as 35 km/h."
+    },
+    {
+      "number": 9,
+      "name": "Wednesday Night",
+      "startTime": "2025-04-09T18:00:00-05:00",
+      "endTime": "2025-04-10T06:00:00-05:00",
+      "isDaytime": false,
+      "temperature": 7,
+      "temperatureUnit": "C",
+      "temperatureTrend": "",
+      "probabilityOfPrecipitation": {
+        "unitCode": "wmoUnit:percent",
+        "value": 20
+      },
+      "windSpeed": "10 to 15 km/h",
+      "windDirection": "N",
+      "icon": "https://api.weather.gov/icons/land/night/tsra_hi,20?size=medium",
+      "shortForecast": "Slight Chance Showers And Thunderstorms",
+      "detailedForecast": "A slight chance of showers and thunderstorms after 7pm. Partly cloudy, with a low around 7. North wind 10 to 15 km/h, with gusts as high as 30 km/h. Chance of precipitation is 20%."
+    },
+    {
+      "number": 10,
+      "name": "Thursday",
+      "startTime": "2025-04-10T06:00:00-05:00",
+      "endTime": "2025-04-10T18:00:00-05:00",
+      "isDaytime": true,
+      "temperature": 21,
+      "temperatureUnit": "C",
+      "temperatureTrend": "",
+      "probabilityOfPrecipitation": {
+        "unitCode": "wmoUnit:percent",
+        "value": 20
+      },
+      "windSpeed": "15 to 20 km/h",
+      "windDirection": "NW",
+      "icon": "https://api.weather.gov/icons/land/day/rain_showers,20/few?size=medium",
+      "shortForecast": "Slight Chance Rain Showers then Sunny",
+      "detailedForecast": "A slight chance of rain showers before 7am. Sunny, with a high near 21. Chance of precipitation is 20%."
+    },
+    {
+      "number": 11,
+      "name": "Thursday Night",
+      "startTime": "2025-04-10T18:00:00-05:00",
+      "endTime": "2025-04-11T06:00:00-05:00",
+      "isDaytime": false,
+      "temperature": 6,
+      "temperatureUnit": "C",
+      "temperatureTrend": "",
+      "probabilityOfPrecipitation": {
+        "unitCode": "wmoUnit:percent",
+        "value": null
+      },
+      "windSpeed": "10 to 20 km/h",
+      "windDirection": "N",
+      "icon": "https://api.weather.gov/icons/land/night/few?size=medium",
+      "shortForecast": "Mostly Clear",
+      "detailedForecast": "Mostly clear, with a low around 6."
+    },
+    {
+      "number": 12,
+      "name": "Friday",
+      "startTime": "2025-04-11T06:00:00-05:00",
+      "endTime": "2025-04-11T18:00:00-05:00",
+      "isDaytime": true,
+      "temperature": 22,
+      "temperatureUnit": "C",
+      "temperatureTrend": "",
+      "probabilityOfPrecipitation": {
+        "unitCode": "wmoUnit:percent",
+        "value": null
+      },
+      "windSpeed": "10 to 20 km/h",
+      "windDirection": "NE",
+      "icon": "https://api.weather.gov/icons/land/day/few?size=medium",
+      "shortForecast": "Sunny",
+      "detailedForecast": "Sunny, with a high near 22."
+    },
+    {
+      "number": 13,
+      "name": "Friday Night",
+      "startTime": "2025-04-11T18:00:00-05:00",
+      "endTime": "2025-04-12T06:00:00-05:00",
+      "isDaytime": false,
+      "temperature": 9,
+      "temperatureUnit": "C",
+      "temperatureTrend": "",
+      "probabilityOfPrecipitation": {
+        "unitCode": "wmoUnit:percent",
+        "value": null
+      },
+      "windSpeed": "15 km/h",
+      "windDirection": "SE",
+      "icon": "https://api.weather.gov/icons/land/night/sct?size=medium",
+      "shortForecast": "Partly Cloudy",
+      "detailedForecast": "Partly cloudy, with a low around 9."
+    },
+    {
+      "number": 14,
+      "name": "Saturday",
+      "startTime": "2025-04-12T06:00:00-05:00",
+      "endTime": "2025-04-12T18:00:00-05:00",
+      "isDaytime": true,
+      "temperature": 26,
+      "temperatureUnit": "C",
+      "temperatureTrend": "",
+      "probabilityOfPrecipitation": {
+        "unitCode": "wmoUnit:percent",
+        "value": null
+      },
+      "windSpeed": "15 to 25 km/h",
+      "windDirection": "S",
+      "icon": "https://api.weather.gov/icons/land/day/sct?size=medium",
+      "shortForecast": "Mostly Sunny",
+      "detailedForecast": "Mostly sunny, with a high near 26."
+    }
+  ]
+}

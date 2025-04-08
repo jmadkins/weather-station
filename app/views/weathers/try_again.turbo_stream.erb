@@ -1,0 +1,11 @@
+<%= turbo_stream.before "forecast" do %>
+    <div class="flash">
+        <div class="flash__inner">
+            <% if @weather.location.nil? %>
+                Unable to find the requested location. Please try again.
+            <% elsif @weather.current_conditions.nil? %>
+                No weather data available for the requested location. Please try again.
+            <% end %>
+        </div>
+    </div>
+<% end %>

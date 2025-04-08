@@ -1,10 +1,9 @@
-<div>
-    <%= form_for :weather, url: weather_path do |form| %>
-        <%= form.label :address %>
-        <%= form.text_field :address %>
-        <%= form.submit 'Submit' %>
-    <% end %>
-</div>
+<%= form_for :weather, url: weather_path do |form| %>
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+    <%= form.submit 'Submit' %>
+<% end %>
 
 <turbo-frame id="forecast">
+    <p class="help-text">Enter a US address above to get started</p>
 </turbo-frame>
