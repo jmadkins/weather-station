@@ -10,7 +10,7 @@ class NWSGateway
   def forecast(latitude, longitude)
     grid_points = fetch_grid_points_for_lat_long(latitude.round(4), longitude.round(4))
     return if grid_points.nil?
-    grid_forecast = @client.grid_forecast(grid_points[:x], grid_points[:y])
+    grid_forecast = @client.grid_forecast(grid_points)
     return if grid_forecast.nil?
 
     grid_forecast[:periods].map { |p| Forecast.new(p) }
@@ -24,7 +24,11 @@ class NWSGateway
       points_response = @client.points(latitude, longitude)
       return if points_response.nil?
 
-      { x: points_response[:gridX], y: points_response[:gridY] }
+      NWSGateway::Client::GridPoints.new(
+        grid_id: points_response[:gridId],
+        point_x: points_response[:gridX],
+        point_y: points_response[:gridY]
+      )
     end
   end
 end
