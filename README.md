@@ -24,4 +24,10 @@ WeatherStation is a Ruby on Rails application that runs on the following softwar
 ## Notes
 
 * I included `.env.development.local` and `config/master.key` despite being security risks. I'll revoke the key in 2 weeks.
-* If given more time, I would have spent designing a better front end.
+* If given more time, I would have designed a better looking front end.
+
+## Getting Started
+
+```bash
+bin/setup
+```
