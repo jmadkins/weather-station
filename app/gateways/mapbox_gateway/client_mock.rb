@@ -1,4 +1,6 @@
 class MapboxGateway::ClientMock
+  # @param [String] address
+  # @return [Hash] Mocked JSON response parsed
   def search_geocode(address)
     return if address == "error"
 

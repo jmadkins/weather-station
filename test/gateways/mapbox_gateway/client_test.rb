@@ -7,7 +7,7 @@ class MapboxGateway::ClientTest < ActiveSupport::TestCase
 
   test "successful responses" do
     stub_request(:get, "https://api.mapbox.com/search/geocode/v6/forward")
-      .with(query: {q: "974 2100 South", access_token: ENV["WS_MAPBOX_ACCESS_TOKEN"]})
+      .with(query: {q: "974 2100 South", access_token: ENV["WS_MAPBOX_ACCESS_TOKEN"], country: "US"})
       .to_return_json(
         body: JSON.parse(file_fixture("mapbox/forward_geocode/success.json").read)
       )
@@ -20,7 +20,7 @@ class MapboxGateway::ClientTest < ActiveSupport::TestCase
 
   test "unsuccessful responses" do
     stub_request(:get, "https://api.mapbox.com/search/geocode/v6/forward")
-      .with(query: {q: "974 2100 South", access_token: ENV["WS_MAPBOX_ACCESS_TOKEN"]})
+      .with(query: {q: "974 2100 South", access_token: ENV["WS_MAPBOX_ACCESS_TOKEN"], country: "US"})
       .to_return(status: [401, "Unauthorized"])
 
     assert_nil @client.search_geocode("974 2100 South")
@@ -28,7 +28,7 @@ class MapboxGateway::ClientTest < ActiveSupport::TestCase
 
   test "timeouts" do
     stub_request(:get, "https://api.mapbox.com/search/geocode/v6/forward")
-      .with(query: {q: "974 2100 South", access_token: ENV["WS_MAPBOX_ACCESS_TOKEN"]})
+      .with(query: {q: "974 2100 South", access_token: ENV["WS_MAPBOX_ACCESS_TOKEN"], country: "US"})
       .to_timeout
 
     assert_nil @client.search_geocode("974 2100 South")

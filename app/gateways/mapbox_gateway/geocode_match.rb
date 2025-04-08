@@ -21,8 +21,8 @@ class MapboxGateway::GeocodeMatch
     @state ||= context(:region)[:name]
   end
 
-  def zip_code
-    @zip_code ||= context(:postcode)[:name]
+  def postal_code
+    @postal_code ||= context(:postcode)[:name]
   end
 
   private

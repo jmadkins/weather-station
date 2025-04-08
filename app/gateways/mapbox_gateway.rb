@@ -1,3 +1,4 @@
+# Mapbox API Gateway
 class MapboxGateway
   def initialize(client: MapboxGateway::Client.new)
     @client = client
@@ -10,7 +11,7 @@ class MapboxGateway
     return if response.nil?
 
     response[:features].each do |feature|
-      # match_code being present indicates that _some_ part of the query was matched.
+      # the presence of `match_code` indicates that _some_ part of our query was matched
       next if feature[:properties][:coordinates].nil? || feature[:properties][:match_code].nil?
 
       return MapboxGateway::GeocodeMatch.new(feature)
